@@ -1,0 +1,89 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+use {{ rootNamespace }}Http\Controllers\Controller;
+use {{ namespacedRequests }}
+
+class {{ class }} extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        //return view('' , get_defined_vars());
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //return view('' , get_defined_vars());
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store({{ storeRequest }} $request)
+    {
+        $data = $request->validated();
+        // $image = $request->image;
+        // $newImageName = time() . '-' . $image->getClientOriginalName();
+        // $image->storeAs('###FOLDER IMAGES ###', $newImageName, 'public');
+        // $data['image'] = $newImageName;
+
+
+        return to_route('')->with('success' , __(''));
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show({{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit({{ model }} ${{ modelVariable }})
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update({{ updateRequest }} $request, {{ model }} ${{ modelVariable }})
+    {
+        //
+        // $data = $request->validated();
+        // if ($request->hasFile('image')) {
+        //     Storage::delete("public/###FOLDER IMAGES ###/${{ modelVariable }}->image");
+        //     $image = $request->image;
+        //     $newImageName = time() . '-' . $image->getClientOriginalName();
+        //     $image->storeAs('###FOLDER IMAGES ###', $newImageName, 'public');
+        //     $data['image'] = $newImageName;
+        // }
+
+        // ${{ modelVariable }}->update($data);
+
+        // return to_route('')->with('success' , __(''));
+        
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy({{ model }} ${{ modelVariable }})
+    {
+        //
+        // Storage::delete("public/###FOLDER IMAGES ###/${{ modelVariable }}->image");
+        // ${{ modelVariable }}->delete();
+        // return to_route('')->with('success' , __(''));
+    }
+}

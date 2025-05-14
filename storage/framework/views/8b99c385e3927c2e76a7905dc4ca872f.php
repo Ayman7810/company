@@ -1,0 +1,69 @@
+<?php if(!empty($messages)): ?>
+    
+<div class="card shadow">
+    <div class="card-body">
+        <table class="table table-borderless table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="all2">
+                            <label class="custom-control-label" for="all2"></label>
+                        </div>
+                    </th>
+                    <th>#</th>
+                    <th><?php echo e(__('shard.name')); ?></th>
+                    <th><?php echo e(__('shard.email')); ?></th>
+                    <th ><?php echo e(__('shard.message')); ?></th>
+                    <th><?php echo e(__('shard.actions')); ?></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php $__currentLoopData = $messages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    
+                <tr>
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="2474">
+                            <label class="custom-control-label" for="2474"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <p class="mb-0 text-muted"><strong><?php echo e($messages->firstItem() + $loop->index); ?></strong></p>
+                    </td>
+                    <td>
+                        <p class="mb-0 text-muted"><strong><?php echo e($message->name); ?></strong></p>
+                    </td>
+                    <td>
+                        <p class="mb-0 text-muted"><?php echo e($message->email); ?></p>
+                    </td>
+                    <td>
+                        <p class="mb-0 text-muted"><?php echo e($message->message); ?></p>
+                    </td>
+                  
+                    <td><button class="btn btn-sm dropdown-toggle more-horizontal" type="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <span class="text-muted sr-only"><?php echo e(__('shard.actions')); ?></span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="#">Remove</a>
+                            <a class="dropdown-item" href="#">Assign</a>
+                        </div>
+                    </td>
+                </tr>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<?php endif; ?>
+
+
+<?php if($messages->hasPages()): ?>
+<div class="d-flex justify-content-center mt-4">
+    <?php echo e($messages->appends(request()->except('page'))->links('pagination::bootstrap-4')); ?>
+
+</div>
+<?php endif; ?><?php /**PATH E:\laragon\www\project\resources\views/admin/feedback/ajax-search.blade.php ENDPATH**/ ?>

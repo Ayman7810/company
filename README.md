@@ -6,8 +6,8 @@
 ### 🔥 Key Features  
 - **Multi-Language Support** – Arabic & English for a global audience.  
 - **Admin Dashboard** – Manage content and data efficiently.  
-- **Blog Comment System** – Engage with visitors through interactive discussions.  
-- **Advanced Filtering** – Improve user navigation and product discovery.  
+- **Blog Comment System** – Engage with visitors through discussions.  
+- **Advanced Filtering** – Improve user navigation and discovery.  
 - **AJAX Search** – Provides fast and dynamic search results.  
 
 ### 🛠️ Technologies Used  
@@ -22,4 +22,6 @@
 ### 🔓 Admin Credentials  
 ✉️ **Email:** `admin@gmail.com`  
 🔑 **Password:** `12345678`  
+
+⚠️ **Important Note:** This website is hosted on a free platform. Please ensure that the URL begins with **http** instead of **https** by removing the letter "s" to access the site properly.  
 

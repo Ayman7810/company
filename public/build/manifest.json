@@ -1,0 +1,19 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-BjTbhE7m.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-DQNOlDuK.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/searchPagination.js": {
+    "file": "assets/searchPagination-l0sNRNKZ.js",
+    "name": "searchPagination",
+    "src": "resources/js/searchPagination.js",
+    "isEntry": true
+  }
+}
